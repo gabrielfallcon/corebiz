@@ -19,6 +19,15 @@ import {
 } from './styles';
 
 const Home = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    api.get('products').then(response => {
+      setProducts(response.data);
+
+      console.log(products);
+    });
+  },[]);
+  
   return (
     <Container>
       <Header />

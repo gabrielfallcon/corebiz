@@ -1,19 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import api from '../../services/api';
 import Carousel from 'react-elastic-carousel';
 
 import { List } from './styles';
 
 const ListProduct = () => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    api.get('products').then(response => {
-      setProducts(response.data);
-
-      console.log(response.data);
-    });
-  },[]);
-
   const breakPoints = [
     {
       width: 350,
