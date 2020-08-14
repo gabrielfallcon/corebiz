@@ -66,6 +66,7 @@ export const List = styled.ul`
                   }
                   .block-star {
                     margin-bottom: 20px;
+                    text-align: center;
                   }
                   .price {
                     width: 100%;

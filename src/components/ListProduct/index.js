@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { FaStar,  FaRegStar } from 'react-icons/fa';
 import Carousel from 'react-elastic-carousel';
 
 import { List } from './styles';
 
 const ListProduct = ({ data }) => {
+  const [rating, setRating] = useState(null);
+
   const breakPoints = [
     {
       width: 350,
@@ -43,11 +46,28 @@ const ListProduct = ({ data }) => {
                 <h2>{item.productName}</h2>
 
                 <div className="block-star">
-                  <div className="star one"></div>
-                  <div className="star two"></div>
-                  <div className="star thre"></div>
-                  <div className="star for"></div>
-                  <div className="star five"></div>
+                  {[...Array(5)].map((star, i) => {
+                    const ratingValue = i + 1
+
+                    return(
+                      <>  
+                        {ratingValue <= item.stars 
+                          ? 
+                            <FaStar 
+                              size={18}
+                              color="F8475F"
+                            />
+
+                          : 
+                            <FaRegStar
+                              size={18}
+                              color="F8475F"
+                            />
+                        }
+                      </>
+                    )
+                    
+                  })}
                 </div>
 
                 <div className="price">
