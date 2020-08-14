@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import api from '../../services/api';
 import {
   FiMail,
   FiHeadphones
 } from 'react-icons/fi';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
 import Header from '../../components/Header';
 import ListProduct from '../../components/ListProduct';
@@ -21,10 +24,36 @@ const Home = () => {
       <Header />
 
       <Banner>
-        <img
-          src="https://media-exp1.licdn.com/dms/image/C4D1BAQEw6o09H5bSTw/company-background_10000/0?e=2159024400&v=beta&t=JyIJ_VNNz9pZTzqJB-q23m5435kTys8D9rkESFwSh_s"
-          alt="Corebiz e-commerce"
-        />
+        <Carousel 
+          showArrows={false} 
+          autoPlay={true} 
+          infiniteLoop={true}
+          interval={3000}
+          showIndicators={true}
+          showThumbs={false}
+          showStatus={false}
+        >
+          <div>
+            <img
+              src="https://media-exp1.licdn.com/dms/image/C4D1BAQEw6o09H5bSTw/company-background_10000/0?e=2159024400&v=beta&t=JyIJ_VNNz9pZTzqJB-q23m5435kTys8D9rkESFwSh_s"
+              alt="Corebiz e-commerce"
+            />
+          </div>
+
+          <div>
+            <img
+              src="https://media-exp1.licdn.com/dms/image/C4D1BAQEw6o09H5bSTw/company-background_10000/0?e=2159024400&v=beta&t=JyIJ_VNNz9pZTzqJB-q23m5435kTys8D9rkESFwSh_s"
+              alt="Corebiz e-commerce"
+            />
+          </div>
+
+          <div>
+            <img
+              src="https://media-exp1.licdn.com/dms/image/C4D1BAQEw6o09H5bSTw/company-background_10000/0?e=2159024400&v=beta&t=JyIJ_VNNz9pZTzqJB-q23m5435kTys8D9rkESFwSh_s"
+              alt="Corebiz e-commerce"
+            />
+          </div>
+        </Carousel>
       </Banner>
 
       <ProductsBuy>
@@ -57,7 +86,7 @@ const Home = () => {
 
           <ul className="footer__andress">
             <h1>Localização</h1>
-            
+
             <li>Avenida Andrômeda, 2000. Bloco 6 e 8</li>
             <li>Alphavile SP</li>
             <li>brasil@corebiz.ag</li>
