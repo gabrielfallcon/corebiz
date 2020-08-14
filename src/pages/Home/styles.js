@@ -37,7 +37,7 @@ export const ProductsBuy = styled.div`
 
 export const NewsLetter = styled.div`
   width: 100%;
-  padding: 0 20px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,8 +46,8 @@ export const NewsLetter = styled.div`
 
   h1 {
     color: #333333;
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 26px;
+    line-height: 30px;
     font-weight: bold;
     padding: 24px  0;
   }
@@ -61,7 +61,7 @@ export const NewsLetter = styled.div`
 
     input {
       width: 100%;
-      height: 80px;
+      height: 60px;
       background: #FFFFFF;
       padding: 17px 16px;
       border-radius: 8px;
@@ -80,7 +80,7 @@ export const NewsLetter = styled.div`
     }
     button {
       width: 100%;
-      height: 80px;
+      height: 60px;
       background: #000000;
       color: #FFFFFF;
       display: flex;
@@ -114,6 +114,111 @@ export const NewsLetter = styled.div`
         margin-left: 8px;
         margin-top: 0;
         font-size: 22px;
+      }
+    }
+  }
+`;
+
+export const Footer = styled.div`
+  width: 100%;
+  padding: 27px 20px 13px 20px;
+  background: #000000;
+  border-bottom: 6px solid #C0C0C0;
+
+  .content {
+    ul.footer__andress {
+      color: #FFFFFF;
+      list-style: none;
+      line-height: 32px;
+      margin-bottom: 40px;
+
+      h1 {
+        color: #FFFFFF;
+        margin-bottom: 15px;
+
+        &::after {
+          content: '';
+          width: 55px;
+          height: 5px;
+          margin-top: 10px;
+          background: #FFFFFF; 
+          display: block;
+        }
+      }
+    }
+    .footer__buttons {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 30px;
+
+      a {
+        width: 100%;
+        height: 60px;
+        color: #000000;
+        text-transform: uppercase;
+        max-width: 300px;
+        background: #FFFFFF;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        line-height: 20px;
+        font-size: 18px;
+        padding: 14px 17px;
+        border-radius: 8px;
+        font-weight: 600;
+
+        & + a {
+          margin-top: 30px;
+        }
+
+        svg {
+          margin-right: 20px;
+        }
+      }
+    }
+    .footer__seal {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      svg {
+        width: 100px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .content{
+      max-width: 1110px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .footer__andress {
+        width: 100%;
+        max-width: 350px;
+      }
+      .footer__buttons {
+        width: 100%;
+        max-width: 350px;
+
+        a {
+          height: 60px;
+          width: 100%;
+          font-size: 15px;
+
+          svg {
+            margin-right: 35px;
+          }
+        }
+      }
+      .footer__seal {
+        max-width: 300px;
       }
     }
   }

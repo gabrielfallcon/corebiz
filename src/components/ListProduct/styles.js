@@ -9,7 +9,7 @@ export const List = styled.ul`
 
   li {
     width: 100%;
-    max-width: 250px;
+    max-width: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,8 +38,8 @@ export const List = styled.ul`
       border-bottom: 70px solid #F8475F;
       transform: rotate(45deg);
       position: absolute;
-      top: -2%;
-      right: -18%;
+      top: -2.5%;
+      right: -20%;
     }
     img {
       width: 100%;
@@ -82,8 +82,8 @@ export const List = styled.ul`
           height: 60px;
           button {
             width: 100%;
-            height: 60px;
-            font-size: 26px;
+            height: 50px;
+            font-size: 22px;
             color: #FFFFFF;
             background: #000000;
             display: flex;
