@@ -20,14 +20,14 @@ import {
 
 const Home = () => {
   const [products, setProducts] = useState([]);
+
   useEffect(() => {
     api.get('products').then(response => {
       setProducts(response.data);
-
-      console.log(products);
     });
   },[]);
   
+  console.log(products);
   return (
     <Container>
       <Header />
@@ -68,7 +68,7 @@ const Home = () => {
       <ProductsBuy>
         <h1>Mais Vendidos</h1>
 
-        <ListProduct />
+        <ListProduct data={products}/>
       </ProductsBuy>
 
       <NewsLetter>

@@ -16,6 +16,7 @@ export const List = styled.ul`
         .rec-slider {
           .rec {
             .rec-item-wrapper {
+              width: 220px !important;
               li {
                 width: 100%;
                 max-width: 200px;
@@ -24,15 +25,12 @@ export const List = styled.ul`
                 justify-content: center;
                 align-items: center;
                 position: relative;
-
-                & + li {
-                  margin-left: 38px;
-                }
+                
 
                 & > span {
                   position: absolute;
-                  top: 15px;
-                  right: 15px;
+                  top: 10px;
+                  right: 2px;
                   font-size: 18px;
                   font-weight: 800;
                   color: #FFF;
@@ -42,13 +40,13 @@ export const List = styled.ul`
                 .promotion {
                   width: 0; 
                   height: 0; 
-                  border-left: 70px solid transparent;
-                  border-right: 70px solid transparent;
-                  border-bottom: 70px solid #F8475F;
+                  border-left: 60px solid transparent;
+                  border-right: 60px solid transparent;
+                  border-bottom: 60px solid #F8475F;
                   transform: rotate(45deg);
                   position: absolute;
                   top: -2.5%;
-                  right: -20%;
+                  right: -22%;
                 }
                 img {
                   width: 100%;
@@ -73,6 +71,10 @@ export const List = styled.ul`
                     width: 100%;
                     display: flex;
                     flex-direction: column;
+
+                    span {
+                      height: 10px;
+                    }
 
                     h1 {
                       font-size: 24px;
@@ -139,8 +141,13 @@ export const List = styled.ul`
           .rec-slider {
             .rec {
               .rec-item-wrapper { 
+                width: 242px !important;
                 li {
                   .product-description {
+                    h2 {
+                      font-size: 12px;
+                    }
+
                     &:hover {
                       background: #E6E8EA;
                       cursor: pointer;
