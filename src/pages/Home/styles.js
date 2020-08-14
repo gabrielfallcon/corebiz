@@ -33,6 +33,15 @@ export const ProductsBuy = styled.div`
       margin-top: 5px;
     }
   }
+
+  @media (min-width: 768px) {
+    max-width: 1110px;
+    margin: 0 auto;
+
+    h1 {
+      margin-bottom: 30px;
+    }
+  }
 `;
 
 export const NewsLetter = styled.div`
@@ -87,7 +96,7 @@ export const NewsLetter = styled.div`
       justify-content: center;
       align-items: center;
       margin-top: 7px;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 700;
       border-radius: 8px;
     }
@@ -100,7 +109,7 @@ export const NewsLetter = styled.div`
       flex-direction: row;
 
       input {
-        height: 70px;
+        height: 60px;
         max-width: 380px;
         margin-top: 0!important;
 
@@ -109,8 +118,8 @@ export const NewsLetter = styled.div`
         }
       }
       button {
-        height: 70px;
-        max-width: 140px;
+        height: 60px;
+        max-width: 180px;
         margin-left: 8px;
         margin-top: 0;
         font-size: 22px;
@@ -135,10 +144,11 @@ export const Footer = styled.div`
       h1 {
         color: #FFFFFF;
         margin-bottom: 15px;
+        font-size: 20px;
 
         &::after {
           content: '';
-          width: 55px;
+          width: 35px;
           height: 5px;
           margin-top: 10px;
           background: #FFFFFF; 
@@ -164,7 +174,7 @@ export const Footer = styled.div`
         align-items: center;
         justify-content: flex-start;
         line-height: 20px;
-        font-size: 18px;
+        font-size: 16px;
         padding: 14px 17px;
         border-radius: 8px;
         font-weight: 600;
@@ -174,7 +184,7 @@ export const Footer = styled.div`
         }
 
         svg {
-          margin-right: 20px;
+          margin-right: 35px;
         }
       }
     }
@@ -210,7 +220,6 @@ export const Footer = styled.div`
         a {
           height: 60px;
           width: 100%;
-          font-size: 15px;
 
           svg {
             margin-right: 35px;

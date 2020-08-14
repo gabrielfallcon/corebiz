@@ -60,10 +60,11 @@ export const InputBlock = styled.div`
   }
   input {
     flex: 1;
+    font-size: 16px;
     
     &::placeholder {
       color: #7A7A7A;
-      font-size: 13px;
+      font-size: 16px;
     }
   }
   
@@ -115,7 +116,7 @@ export const Information = styled.ul`
 
   @media (min-width: 768px) {
     width: 100%;
-    max-width: 160px;
+    max-width: 180px;
     justify-content: space-between;
 
     .informations__my-count {
@@ -149,10 +150,12 @@ export const InputMobile = styled.div`
     }
     input {
       flex: 1;
+      font-size: 16px;
+      padding: 0 5px;
       
       &::placeholder {
         color: #7A7A7A;
-        font-size: 13px;
+        font-size: 16px;
       }
     }
   }

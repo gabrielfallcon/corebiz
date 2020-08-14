@@ -83,14 +83,14 @@ export const List = styled.ul`
           button {
             width: 100%;
             height: 50px;
-            font-size: 22px;
+            font-size: 18px;
+            font-weight: 700;
             color: #FFFFFF;
             background: #000000;
             display: flex;
             justify-content: center;
             align-items: center;
             text-transform: uppercase;
-            font-weight: 700;
             border-radius: 8px;
             transition: .4s;
           }
@@ -100,6 +100,8 @@ export const List = styled.ul`
   }
 
   @media (min-width: 768px) {
+    margin-bottom: 70px;
+    
     li {
       .product-description {
         &:hover {
