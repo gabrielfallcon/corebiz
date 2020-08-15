@@ -29,15 +29,17 @@ const Home = () => {
   const formRef = useRef(null);
 
   const [products, setProducts] = useState([]);
-
   const [isSuccessSendEmail, setIsSuccessSendEmail] = useState(false)
+  const [shoppingCart, setShoppingCart] = useState(0);
 
 
   useEffect(() => {
     api.get('products').then(response => {
       setProducts(response.data);
     });
-  },[]);
+    
+    setShoppingCart(Number(localStorage.getItem('cart')));
+  },[shoppingCart]);
   
   const handleSendMailNewsLetter = useCallback(async(data) => {
     try {
@@ -71,6 +73,15 @@ const Home = () => {
 
   const newSendEmail = () => {
     setIsSuccessSendEmail(false)
+  }
+
+  const buyProduct = () => {
+    const total = shoppingCart + 1;
+
+    localStorage.setItem('cart', total);
+    // localStorage.clear();
+
+    setShoppingCart(total);
   }
 
   return (
@@ -113,7 +124,7 @@ const Home = () => {
       <ProductsBuy>
         <h1>Mais Vendidos</h1>
 
-        <ListProduct data={products}/>
+        <ListProduct data={products} buyAction={buyProduct}/>
       </ProductsBuy>
 
       <NewsLetter>

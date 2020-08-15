@@ -15,6 +15,8 @@ import {
 } from './styles';
 
 const Header = () => {
+  const request = localStorage.getItem('cart');
+
   return (
     <>
       <Container>
@@ -46,14 +48,16 @@ const Header = () => {
         <Information className="informations">
           <li className="informations__my-count">
             <FiUser size={25}/>
+
             <a href="">Minha Conta</a>
           </li>
 
           <li className="informations__my-buy">
             <FiShoppingCart size={25}/>
+
             <div className="my-buy__count-buy">
-              1
-              </div>
+              {request ? request : 0}
+            </div>
           </li>
         </Information>
       </Container>

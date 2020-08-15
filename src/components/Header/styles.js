@@ -100,12 +100,12 @@ export const Information = styled.ul`
       margin-right: 4px;
     }
     .my-buy__count-buy {
-      width: 14px;
-      height: 14px;
+      width: 19px;
+      height: 19px;
       background: #F8475F;
       color: #FFF;
       font-size: 11px;
-      font-weight: bold;
+      font-weight: bolder;
       display: flex;
       align-items: center;
       justify-content: center;

@@ -5,7 +5,7 @@ import transformValuePrice from '../../utils/transformValuePrice';
 
 import { List } from './styles';
 
-const ListProduct = ({ data }) => {
+const ListProduct = ({ data, buyAction }) => {
   const [rating, setRating] = useState(null);
 
   const breakPoints = [
@@ -92,7 +92,9 @@ const ListProduct = ({ data }) => {
                   })}
 
                   <div className="buy-button">
-                    <button>Comprar</button>
+                    <button onClick={buyAction}>
+                      Comprar
+                    </button>
                   </div>
                 </div>
               </div>
