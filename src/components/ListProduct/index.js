@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaStar,  FaRegStar } from 'react-icons/fa';
 import Carousel from 'react-elastic-carousel';
+import transformValuePrice from '../../utils/transformValuePrice';
 
 import { List } from './styles';
 
@@ -26,6 +27,9 @@ const ListProduct = ({ data }) => {
       >
 
         {data.map(item => {
+          const listPriceTransformed = transformValuePrice(item.listPrice)
+          const priceTransformed = transformValuePrice(item.price)
+
           return (
             <li key={item.productId}>
 
@@ -66,24 +70,26 @@ const ListProduct = ({ data }) => {
                         }
                       </>
                     )
-                    
                   })}
                 </div>
 
                 <div className="price">
-
                   <span>
-                    {item.listPrice && `de R$ ${item.listPrice}`}
+                    {item.listPrice && `de R$ ${listPriceTransformed}`}
                   </span>
 
-                  <h1>por <span>R$ {item.price}</span></h1>
+                  <h1>por <span>R$ {priceTransformed}</span></h1>
 
-                  {item.installments.map(installment => (
-                    <span>
-                      ou em {installment.quantity}x
-                      de R$ {installment.value}
-                    </span>
-                  ))}
+                  {item.installments.map(installment => {
+                    const installmentTransformed = transformValuePrice(installment.value)
+
+                    return (
+                      <span>
+                        ou em {installment.quantity}x
+                        de R$ {installmentTransformed}
+                      </span>
+                    )
+                  })}
 
                   <div className="buy-button">
                     <button>Comprar</button>

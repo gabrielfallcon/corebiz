@@ -55,6 +55,11 @@ const Home = () => {
         abortEarly: false
       });
 
+      await api.post('newsletter', {
+        email: data.email,
+        name: data.name
+      });
+
       setIsSuccessSendEmail(true)
     } catch (err) {
       const errors = getValidationsErrors(err);
@@ -166,12 +171,12 @@ const Home = () => {
           </ul>
 
           <div className="footer__buttons">
-            <a href="#">
+            <a href="mailto:brasil@corebiz.ag">
               <FiMail size={30} />
               Entre em contato
             </a>
 
-            <a href="#">
+            <a href="tel:551130901039">
               <FiHeadphones size={30} />
               Fale com o nosso <br />
               consultor online

@@ -26,7 +26,7 @@ export const ProductsBuy = styled.div`
 
     &::after {
       content: '';
-      width: 32.5px;
+      width: 52.5px;
       height: 6px;
       background: #C0C0C0;
       display: block;
@@ -39,7 +39,12 @@ export const ProductsBuy = styled.div`
     margin: 0 auto;
 
     h1 {
-      margin-bottom: 30px;
+      margin: 30px 0;
+      font-size: 32px;
+
+      &::after {
+        width: 82.5px;
+      }
     }
   }
 `;
@@ -70,6 +75,7 @@ export const NewsLetter = styled.div`
 
     input {
       border: 1px solid #BDBDBD;
+      margin-top: 8px;
     }
     button {
       width: 100%;
