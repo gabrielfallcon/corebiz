@@ -82,7 +82,7 @@ $ yarn start
 ```
 ---
 
-Feito por [Gabriel Nascimento](https://www.linkedin.com/in/frontgabriel/)
+Desenvolvido por [Gabriel Nascimento](https://www.linkedin.com/in/frontgabriel/) :trollface: :purple_heart:
 
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/
