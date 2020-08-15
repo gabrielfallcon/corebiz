@@ -12,6 +12,13 @@ export const Banner = styled.div`
   img {
     width: 100%;
   }
+
+  @media (min-width: 768px) {
+    img {
+      width: auto;
+      max-height: 600px;
+    }
+  }
 `;
 
 export const ProductsBuy = styled.div`
@@ -240,6 +247,7 @@ export const Footer = styled.div`
         a {
           height: 60px;
           width: 100%;
+          font-size: 16px;
 
           svg {
             margin-right: 35px;
@@ -266,6 +274,7 @@ export const ToastAddProductCart = styled.div`
 
   .toast {
     width: 90%;
+    max-width: 600px;
     height: 250px;
     background: #F8475F;
     border-radius: 8px;

@@ -112,21 +112,19 @@ const Home = () => {
           >
             <div>
               <img
-                src="https://media-exp1.licdn.com/dms/image/C4D1BAQEw6o09H5bSTw/company-background_10000/0?e=2159024400&v=beta&t=JyIJ_VNNz9pZTzqJB-q23m5435kTys8D9rkESFwSh_s"
+                src="https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
                 alt="Corebiz e-commerce"
               />
             </div>
-
             <div>
               <img
-                src="https://media-exp1.licdn.com/dms/image/C4D1BAQEw6o09H5bSTw/company-background_10000/0?e=2159024400&v=beta&t=JyIJ_VNNz9pZTzqJB-q23m5435kTys8D9rkESFwSh_s"
+                src="https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
                 alt="Corebiz e-commerce"
               />
             </div>
-
             <div>
               <img
-                src="https://media-exp1.licdn.com/dms/image/C4D1BAQEw6o09H5bSTw/company-background_10000/0?e=2159024400&v=beta&t=JyIJ_VNNz9pZTzqJB-q23m5435kTys8D9rkESFwSh_s"
+                src="https://images.unsplash.com/photo-1496449903678-68ddcb189a24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
                 alt="Corebiz e-commerce"
               />
             </div>

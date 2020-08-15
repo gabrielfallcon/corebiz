@@ -98,12 +98,13 @@ export const Information = styled.ul`
 
   @media (min-width: 768px) {
     width: 100%;
-    max-width: 180px;
+    max-width: 200px;
     justify-content: space-between;
 
     .informations__my-count {
       display: flex;
       a {
+        font-size: 18px;
         color: #7A7A7A;
       }
     }
