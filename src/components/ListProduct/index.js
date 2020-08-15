@@ -10,8 +10,8 @@ const ListProduct = ({ data, buyAction }) => {
 
   const breakPoints = [
     {
-      width: 350,
-      itemsToShow: 2,
+      width: 1,
+      itemsToShow: 1,
     },
     {
       width: 768,

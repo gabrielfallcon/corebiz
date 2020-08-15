@@ -16,10 +16,10 @@ export const List = styled.ul`
         .rec-slider {
           .rec {
             .rec-item-wrapper {
-              width: 220px !important;
+              
               li {
                 width: 100%;
-                max-width: 200px;
+                max-width: 280px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
