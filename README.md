@@ -29,17 +29,17 @@ Projeto desenvolvido utilizando:
 ## :link: Link do site 
   [Hospedado na Vercel](https://corebiz.vercel.app/)
 
-## :rocket: Desafio
+## :memo: Desafio
 
 Os Desafios realizados nesse teste foram:
 
 -  Consumindo API(products e newsletter)
 
--  API - products: :cloud:
+  API - products: :cloud:
 - [X] Listar produtos com informações de products 
 - [X] Ao clicar no botão de comprar salvar a quantidade de itens no LocalStorage 
 
--  API - newsletter: :cloud:
+  API - newsletter: :cloud:
 - [X] Criação de um formulário de Newsletter com os campos nome e e-mail 
 -  Validação do campo nome:
 - [X] Caso o campo esteja vazio retorna um erro[Preencha com seu nome completo] 
@@ -48,12 +48,12 @@ Os Desafios realizados nesse teste foram:
 - [X] Caso o campo esteja com um e-mail inválido retorna um erro[Preecha com um e-mail válido] 
 - [X] Ao enviar o e-mail retorna uma menssagem de sucesso com a opção de cadastrar um novo e-mail 
 
--  No Footer existe dois links:
+  No Footer existe dois links:
 - [X] [Entre em Contato] redireciona para o email ancorado no mailto: do href 
 - [X] [Fale com o nosso consultor online] redireciona para chamadas de telefone ancorado no tel: do href 
 
--  Layout :art:
---  O Layout teve como base os principios de [Mobile First](https://www.hostgator.com.br/blog/mobile-first-o-que-e/) desenvolvendo para telas mobile e adaptando para web :heavy_check_mark:
+  Layout :art:
+-  [X] O Layout teve como base os principios de [Mobile First](https://www.hostgator.com.br/blog/mobile-first-o-que-e/) desenvolvendo para telas mobile e adaptando para web 
 
 
 ## :bangbang: Important
