@@ -43,7 +43,7 @@ export const ProductsBuy = styled.div`
   }
 
   @media (min-width: 768px) {
-    max-width: 1110px;
+    max-width: 1200px;
     margin: 0 auto;
 
     h1 {
@@ -230,7 +230,7 @@ export const Footer = styled.div`
 
   @media (min-width: 768px) {
     .content{
-      max-width: 1110px;
+      max-width: 1200px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;

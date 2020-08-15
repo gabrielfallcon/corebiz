@@ -140,6 +140,8 @@ export const List = styled.ul`
         }
         .rec-slider-container {
           .rec-slider {
+            width: 100%;
+            justify-content: space-between;
             .rec {
               .rec-item-wrapper { 
                 width: 242px !important;
