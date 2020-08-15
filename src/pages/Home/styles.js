@@ -69,23 +69,7 @@ export const NewsLetter = styled.div`
     justify-content: center;
 
     input {
-      width: 100%;
-      height: 60px;
-      background: #FFFFFF;
-      padding: 17px 16px;
-      border-radius: 8px;
-      color: #585858;
-      font-size: 16px;
-      font-weight: 600;
-
-      & + input {
-        margin-top: 22px;
-      }
-      &::placeholder {
-        font-size: 18px;
-        color: #585858;
-        font-weight: 700;
-      }
+      border: 1px solid #BDBDBD;
     }
     button {
       width: 100%;
@@ -108,15 +92,6 @@ export const NewsLetter = styled.div`
     form {
       flex-direction: row;
 
-      input {
-        height: 60px;
-        max-width: 380px;
-        margin-top: 0!important;
-
-        & + input {
-          margin-left: 8px;
-        }
-      }
       button {
         height: 60px;
         max-width: 180px;
@@ -125,6 +100,44 @@ export const NewsLetter = styled.div`
         font-size: 22px;
       }
     }
+  }
+`;
+
+export const SendEmailSuccess = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  h1 {
+    width: 100%;
+    max-width: 480px;
+    margin-bottom: 5px;
+    padding: 0;
+  }
+
+  span {
+    width: 100%;
+    max-width: 480px;
+    margin: 0;
+    color: #7A7A7A;
+    margin-bottom: 15px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 480px;
+    height: 70px;
+    background: #000000;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
   }
 `;
 

@@ -1,25 +1,37 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback, useRef} from 'react';
+import { Form } from '@unform/web';
+import * as Yup from 'yup';
+import getValidationsErrors from '../../utils/getValidationErrors';
+
 import api from '../../services/api';
 import {
   FiMail,
   FiHeadphones
 } from 'react-icons/fi';
+
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
 import Header from '../../components/Header';
 import ListProduct from '../../components/ListProduct';
+import Input from '../../components/Input';
 
 import {
   Container,
   Banner,
   ProductsBuy,
   NewsLetter,
+  SendEmailSuccess,
   Footer
 } from './styles';
 
 const Home = () => {
+  const formRef = useRef(null);
+
   const [products, setProducts] = useState([]);
+
+  const [isSuccessSendEmail, setIsSuccessSendEmail] = useState(false)
+
 
   useEffect(() => {
     api.get('products').then(response => {
@@ -27,7 +39,35 @@ const Home = () => {
     });
   },[]);
   
-  console.log(products);
+  const handleSendMailNewsLetter = useCallback(async(data) => {
+    try {
+      formRef.current.setErrors({});
+
+      const schema = Yup.object().shape({
+        name: Yup.string()
+          .required('Preencha com seu nome completo'),
+        email: Yup.string()
+          .required('E-mail obrigatório')
+          .email('Preecha com um e-mail válido'),
+      });
+
+      await schema.validate(data, {
+        abortEarly: false
+      });
+
+      setIsSuccessSendEmail(true)
+    } catch (err) {
+      const errors = getValidationsErrors(err);
+
+      formRef.current.setErrors(errors);
+    }
+    
+  }, []);
+
+  const newSendEmail = () => {
+    setIsSuccessSendEmail(false)
+  }
+
   return (
     <Container>
       <Header />
@@ -72,22 +112,45 @@ const Home = () => {
       </ProductsBuy>
 
       <NewsLetter>
-        <h1>
-          Participe de nossas news com promoção
-          e novidades!
-        </h1>
+        
+        {isSuccessSendEmail === false 
+          ?
+            <>
+              <h1>
+                Participe de nossas news com promoção
+                e novidades!
+              </h1>
 
-        <form>
-          <input
-            type="text"
-            placeholder="Digite seu nome"
-          />
-          <input
-            type="text"
-            placeholder="Digite seu email"
-          />
-          <button type="submit">Eu quero!</button>
-        </form>
+              <Form ref={formRef} onSubmit={handleSendMailNewsLetter}>
+                <Input
+                  type="text"
+                  name="name"
+                  placeholder="Digite seu nome"
+                />
+                <Input
+                  type="text"
+                  name="email"
+                  placeholder="Digite seu email"
+                />
+                <button type="submit">Eu quero!</button>
+              </Form>
+            </>
+          :
+            <SendEmailSuccess>
+              <h1>Seu e-mail foi cadastrado com sucesso!</h1>
+
+              <span>
+                A partir de agora você receberá as novidades e ofertas exclusivas.
+              </span>
+
+              <button
+                onClick={newSendEmail}
+              >
+                Cadastrar novo e-mail
+              </button>
+            </SendEmailSuccess>
+        }
+          
       </NewsLetter>
 
       <Footer>
