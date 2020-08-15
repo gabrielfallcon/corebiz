@@ -1,6 +1,6 @@
 <h2 align="center">
     <img width="150px" alt="Corebiz" src="https://www.piatannatural.com.br/arquivos/logo-corebiz-preto-cinza.svg?v=637179156714370000" />
-    <br>
+    <br/> <br /> <br />
     Teste Frontend - Reactjs :octocat:
 </h2>
 
