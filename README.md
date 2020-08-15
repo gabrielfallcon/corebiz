@@ -24,14 +24,14 @@ Projeto desenvolvido utilizando:
 -  [Styled-components](https://www.styled-components.com)
 -  [React-elastic-carousel](https://www.npmjs.com/package/react-elastic-carousel)
 -  [React-icons](https://react-icons.github.io/react-icons)
--  [VS Code][vc] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
+-  [VS Code][https://code.visualstudio.com/] 
 
 ## :link: Link do site 
   [Hospedado na Vercel](https://corebiz.vercel.app/)
 
 ## :memo: Desafio
 
-Os Desafios realizados nesse teste foram:
+Os Desafios realizados neste teste foram:
 
 -  Consumindo API(products e newsletter)
 
@@ -61,7 +61,7 @@ Os Desafios realizados nesse teste foram:
 No banner foi utilizado outra imagem ao invés da proposta no layout(Não consegui baixá-la) :disappointed:
 
 Na tela mobile foi proposto que aparecesse 2 produtos por scroll em produtos mas optei por
-colocar 1 por tela para a maior vizualização dos detalhes e informações do produto! :heavy_check_mark:
+colocar 1 por scroll para a melhor vizualização dos detalhes e informações do produto! :heavy_check_mark:
 
 ## :information_source: How To Use
 
