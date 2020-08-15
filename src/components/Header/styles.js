@@ -21,24 +21,6 @@ export const Container = styled.header`
 export const MenuMobile = styled.div`
   position: relative;
 
-  svg {
-    cursor: pointer;
-  }
-
-  .menu-mobile__options {
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0,0,0, 0.6);
-
-    .options__list {
-      margin-bottom: 40%;
-    }
-  }
-
   @media (min-width: 768px) {
     display: none;
   }

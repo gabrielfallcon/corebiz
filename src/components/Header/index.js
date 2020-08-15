@@ -22,12 +22,6 @@ const Header = () => {
       <Container>
         <MenuMobile className="menu-mobile">
           <FiAlignJustify size={40}/>
-
-          <div className="menu-mobile__options">
-            <ul className="options__list">
-              <li>Minha Conta</li>
-            </ul>
-          </div>
         </MenuMobile>
 
         <svg width="120" height="40" viewBox="0 0 103 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +62,6 @@ const Header = () => {
             type="search" 
             placeholder="O que está procurando?"
           />
-
           <FiSearch size={28}/>
         </div>
       </InputMobile>

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
+  position: relative;
 `;
 
 export const Banner = styled.div`
@@ -250,4 +251,44 @@ export const Footer = styled.div`
       }
     }
   }
+`;
+
+export const ToastAddProductCart = styled.div`
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .toast {
+    width: 90%;
+    height: 250px;
+    background: #F8475F;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      color: #FFF;
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    button {
+      width: 140px;
+      height: 50px;
+      border-radius: 8px;
+      color: #F8475F;
+      background: #FFF;
+      font-size: 20px;
+      font-weight: 800;
+    }
+  }
+  
 `;
