@@ -29,8 +29,8 @@ export const List = styled.ul`
 
                 & > span {
                   position: absolute;
-                  top: 10px;
-                  right: 2px;
+                  top: 15px;
+                  right: 0;
                   font-size: 18px;
                   font-weight: 800;
                   color: #FFF;
@@ -40,9 +40,9 @@ export const List = styled.ul`
                 .promotion {
                   width: 0; 
                   height: 0; 
-                  border-left: 60px solid transparent;
-                  border-right: 60px solid transparent;
-                  border-bottom: 60px solid #F8475F;
+                  border-left: 65px solid transparent;
+                  border-right: 65px solid transparent;
+                  border-bottom: 65px solid #F8475F;
                   transform: rotate(45deg);
                   position: absolute;
                   top: -2.5%;
@@ -84,6 +84,7 @@ export const List = styled.ul`
                     }
                     & > span {
                       color: #7A7A7A;
+                      height: 12px;
                       font-size: 13px;
                       font-weight: 400;
                       text-transform: uppercase;
@@ -146,6 +147,16 @@ export const List = styled.ul`
               .rec-item-wrapper { 
                 width: 242px !important;
                 li {
+
+                  & > span {
+                    top: 10px;
+                    right: 5px;
+                  .promotion {
+                    border-left: 60px solid transparent;
+                    border-right: 60px solid transparent;
+                    border-bottom: 60px solid #F8475F;
+                  }
+
                   .product-description {
                     h2 {
                       font-size: 12px;

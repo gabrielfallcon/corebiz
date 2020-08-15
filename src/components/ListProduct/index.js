@@ -80,16 +80,18 @@ const ListProduct = ({ data, buyAction }) => {
 
                   <h1>por <span>R$ {priceTransformed}</span></h1>
 
-                  {item.installments.map(installment => {
-                    const installmentTransformed = transformValuePrice(installment.value)
+                  <span>
+                    {item.installments.map(installment => {
+                      const installmentTransformed = transformValuePrice(installment.value)
 
-                    return (
-                      <span>
-                        ou em {installment.quantity}x
-                        de R$ {installmentTransformed}
-                      </span>
-                    )
-                  })}
+                      return (
+                        <>
+                          ou em {installment.quantity}x
+                          de R$ {installmentTransformed}
+                        </>
+                      )
+                    })}
+                  </span>
 
                   <div className="buy-button">
                     <button onClick={buyAction}>

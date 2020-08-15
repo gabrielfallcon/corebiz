@@ -1,68 +1,88 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+    <img alt="Corebiz" src="https://www.corebiz.ag/wp-content/uploads/2020/06/logo-corebiz-global.svg" />
+    <br>
+    Teste Frontend - Reactjs :octocat:
+</h1>
 
-## Available Scripts
+<h4 align="center">
+  Frontend Clone App with React.
+</h4>
 
-In the project directory, you can run:
 
-### `yarn start`
+<p align="center">
+  <img alt="Demo on Vercel" src="https://res.cloudinary.com/https-github-com-gabrielfallcon/image/upload/v1597502297/corebiz_apmpcd.gif">
+</p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## :rocket: Techs
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Projeto desenvolvido utilizando:
 
-### `yarn test`
+-  [ReactJS](https://reactjs.org)
+-  [Axios](https://github.com/axios/axios)
+-  [Unform](https://unform.dev)
+-  [Yup](https://github.com/jquense/yup)
+-  [Styled-components](https://www.styled-components.com)
+-  [React-elastic-carousel](https://www.npmjs.com/package/react-elastic-carousel)
+-  [React-icons](https://react-icons.github.io/react-icons)
+-  [VS Code][vc] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :link: Link do site 
+  [Hospedado na Vercel](https://corebiz.vercel.app/)
 
-### `yarn build`
+## :rocket: Desafio
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Os Desafios realizados nesse teste foram:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+-  Consumindo API(products e newsletter)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-  API - products: :cloud:
+--  Listar produtos com informações de products :heavy_check_mark:
+--  Ao clicar no botão de comprar salvar a quantidade de itens no LocalStorage :heavy_check_mark:
 
-### `yarn eject`
+-  API - newsletter: :cloud:
+--  Criação de um formulário de Newsletter com os campos nome e e-mail :heavy_check_mark:
+--  Validação do campo nome:
+---  Caso o campo esteja vazio retorna um erro[Preencha com seu nome completo] :heavy_check_mark:
+--  Validação do campo email: 
+---  Caso o campo esteja vazio retorna um erro[E-mail obrigatório] :heavy_check_mark:
+---  Caso o campo esteja com um e-mail inválido retorna um erro[Preecha com um e-mail válido]  :heavy_check_mark: 
+--  Ao enviar o e-mail retorna uma menssagem de sucesso com a opção de cadastrar um novo e-mail :heavy_check_mark:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+-  No Footer existe dois links:
+--  [Entre em Contato] redireciona para o email ancorado no mailto: do href :heavy_check_mark:
+--  [Fale com o nosso consultor online] redireciona para chamadas de telefone ancorado no tel: do href :heavy_check_mark:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-  Layout :art:
+--  O Layout teve como base os principios de [Mobile First](https://www.hostgator.com.br/blog/mobile-first-o-que-e/) desenvolvendo para telas mobile e adaptando para web :heavy_check_mark:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## ::bangbang:: Important
 
-## Learn More
+No banner foi utilizado outra imagem ao invés da proposta no layout(Não consegui baixá-la) :disappointed:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Na tela mobile foi proposto que aparecesse 2 produtos por scroll em produtos mas optei por
+colocar 1 por tela para a maior vizualização dos detalhes e informações do produto! :heavy_check_mark:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## :information_source: How To Use
 
-### Code Splitting
+To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v12.6][nodejs] or higher + [Yarn v1.22][yarn] or higher installed on your computer. From your command line:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```bash
+# Clone this repository
+$ git clone https://github.com/gabrielfallcon/corebiz.git frontend-corebiz
 
-### Analyzing the Bundle Size
+# Go into the repository
+$ cd frontend-corebiz
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+# Install dependencies
+$ yarn install
 
-### Making a Progressive Web App
+# Run the app (WEB)
+$ yarn start
+```
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Feito por [Gabriel Nascimento](https://www.linkedin.com/in/frontgabriel/)
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[nodejs]: https://nodejs.org/
+[yarn]: https://yarnpkg.com/
