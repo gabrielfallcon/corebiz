@@ -36,6 +36,7 @@ const Header = () => {
 
         <InputBlock className="input-block">
           <input type="search" placeholder="O que está procurando?"/>
+          
           <FiSearch size={25}/>
         </InputBlock>
 

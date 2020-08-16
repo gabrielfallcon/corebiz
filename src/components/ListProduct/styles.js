@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const List = styled.ul`
   width: 100%;
   list-style: none;
-
   display: flex;
   align-items: center;
 
@@ -26,7 +25,6 @@ export const List = styled.ul`
                 align-items: center;
                 position: relative;
                 
-
                 & > span {
                   position: absolute;
                   top: 15px;
@@ -76,7 +74,6 @@ export const List = styled.ul`
                     span {
                       height: 10px;
                     }
-
                     h1 {
                       font-size: 24px;
                       text-align: center;
@@ -137,17 +134,17 @@ export const List = styled.ul`
           box-shadow: none;
           background: transparent;
           color: #000000;
-          
         }
         .rec-slider-container {
           .rec-slider {
             width: 100%;
             justify-content: space-between;
+
             .rec {
               .rec-item-wrapper { 
                 width: 242px !important;
-                li {
 
+                li {
                   & > span {
                     top: 10px;
                     right: 5px;
@@ -157,12 +154,10 @@ export const List = styled.ul`
                     border-right: 60px solid transparent;
                     border-bottom: 60px solid #F8475F;
                   }
-
                   .product-description {
                     h2 {
                       font-size: 12px;
                     }
-
                     &:hover {
                       background: #E6E8EA;
                       cursor: pointer;

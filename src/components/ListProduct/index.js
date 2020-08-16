@@ -6,7 +6,6 @@ import transformValuePrice from '../../utils/transformValuePrice';
 import { List } from './styles';
 
 const ListProduct = ({ data, buyAction }) => {
-  const [rating, setRating] = useState(null);
 
   const breakPoints = [
     {

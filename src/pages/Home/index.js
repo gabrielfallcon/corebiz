@@ -2,20 +2,18 @@ import React, {useState, useEffect, useCallback, useRef} from 'react';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
 import getValidationsErrors from '../../utils/getValidationErrors';
-
 import api from '../../services/api';
 import {
   FiMail,
   FiHeadphones
 } from 'react-icons/fi';
-
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
 import Header from '../../components/Header';
 import ListProduct from '../../components/ListProduct';
 import Input from '../../components/Input';
 
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import {
   Container,
   Banner,
@@ -33,7 +31,6 @@ const Home = () => {
   const [isSuccessSendEmail, setIsSuccessSendEmail] = useState(false)
   const [shoppingCart, setShoppingCart] = useState(0);
   const [isClosedToast, setIsClosedToast] = useState(false);
-
 
   useEffect(() => {
     api.get('products').then(response => {
@@ -64,17 +61,16 @@ const Home = () => {
         name: data.name
       });
 
-      setIsSuccessSendEmail(true)
+      setIsSuccessSendEmail(true);
     } catch (err) {
       const errors = getValidationsErrors(err);
 
       formRef.current.setErrors(errors);
     }
-    
   }, []);
 
   const newSendEmail = () => {
-    setIsSuccessSendEmail(false)
+    setIsSuccessSendEmail(false);
   }
 
   const buyProduct = () => {
@@ -91,7 +87,7 @@ const Home = () => {
     if (isClosedToast === true ) {
       setIsClosedToast(false);
     } else {
-      setIsClosedToast(true)
+      setIsClosedToast(true);
     }
   }
 
@@ -137,8 +133,10 @@ const Home = () => {
           <ListProduct data={products} buyAction={buyProduct}/>
         </ProductsBuy>
 
-        <NewsLetter>
-          
+        <NewsLetter>  
+          {/* Se o Email é enviado com sucesso renderizar 
+          o elemento <SendEmailSuccess>
+          caso alcontrário exibir <Form> */}
           {isSuccessSendEmail === false 
             ?
               <>
@@ -175,13 +173,11 @@ const Home = () => {
                   Cadastrar novo e-mail
                 </button>
               </SendEmailSuccess>
-          }
-            
+          }    
         </NewsLetter>
 
         <Footer>
           <div className="content">
-
             <ul className="footer__andress">
               <h1>Localização</h1>
 
@@ -215,7 +211,6 @@ const Home = () => {
                 <path d="M71.44 17.9456H59.6969V15.4885L67.1163 7.92148H59.5731V5.44262H71.4194V7.82798L63.9071 15.4603H71.44V17.95V17.9456Z" fill="white" />
               </svg>
 
-
               <svg width="98" height="34" viewBox="0 0 49 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M34.8284 6.36509H33.1109V12.1713C33.1109 12.28 33.0164 12.3731 32.9061 12.3731H31.5825C31.4722 12.3731 31.3776 12.28 31.3776 12.1713V6.36509H29.6444C29.5971 6.36509 29.5341 6.34957 29.5026 6.31852C29.471 6.28747 29.4395 6.24089 29.4395 6.1788V5.15417C29.4395 5.1076 29.4553 5.0455 29.5026 5.01445C29.5341 4.9834 29.5971 4.95235 29.6444 4.96788H34.8284C34.9387 4.96788 35.0333 5.0455 35.0333 5.15417V6.1788C35.0333 6.28747 34.9387 6.36509 34.8284 6.36509Z" fill="white" />
                 <path d="M40.3434 12.3266C39.6658 12.4197 38.9725 12.4663 38.295 12.4508C36.9871 12.4508 35.8369 12.1247 35.8369 10.3084V7.00161C35.8369 5.18523 37.0029 4.87474 38.3107 4.87474C38.9883 4.85921 39.6658 4.90579 40.3434 4.99894C40.4852 5.01446 40.5482 5.07656 40.5482 5.20076V6.13223C40.5482 6.2409 40.4537 6.33405 40.3434 6.33405H38.2162C37.7435 6.33405 37.5701 6.4893 37.5701 7.01714V7.91756H40.2646C40.3749 7.91756 40.4694 8.01071 40.4694 8.11938V9.06639C40.4694 9.17506 40.3749 9.26821 40.2646 9.26821H37.5701V10.3239C37.5701 10.8362 37.7435 11.007 38.2162 11.007H40.3434C40.4537 11.007 40.5482 11.1001 40.5482 11.2088V12.1403C40.5482 12.2489 40.4852 12.311 40.3434 12.3266Z" fill="white" />
@@ -227,6 +222,7 @@ const Home = () => {
           </div>
         </Footer>
         
+        {/* Se isClosedToast é == true renderizar <ToastAddProductCart> */}
         {isClosedToast && (
           <ToastAddProductCart>
             <div className="toast">
@@ -241,7 +237,6 @@ const Home = () => {
           </ToastAddProductCart>
         )}
       </Container>
-      
     </>
   );
 }
