@@ -151,6 +151,7 @@ export const List = styled.ul`
                   & > span {
                     top: 10px;
                     right: 5px;
+                  }
                   .promotion {
                     border-left: 60px solid transparent;
                     border-right: 60px solid transparent;
